@@ -19,7 +19,7 @@ class MusicLibraryController
       puts "To play a song, enter 'play song'."
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
-      answer = gets
+      answer = gets.strip
         if answer == 'list songs'
           list_songs
         elsif answer == 'list artists'
