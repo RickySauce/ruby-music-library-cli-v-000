@@ -60,7 +60,7 @@ class MusicLibraryController
 
    def list_songs_by_artist
      puts "Please enter the name of an artist:"
-     answer = gets
+     answer = gets.strip
      if answer = Artist.find_by_name(answer)
        list = answer.songs.sort_by{|i| i.name}
        list.each do |i|
@@ -71,7 +71,7 @@ class MusicLibraryController
 
    def list_songs_by_genre
      puts "Please enter the name of a genre:"
-     answer = gets
+     answer = gets.strip
      if answer = Genre.find_by_name(answer)
        list = answer.songs.sort_by{|i| i.name}
        list.each do |i|
